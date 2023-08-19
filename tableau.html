@@ -1,0 +1,113 @@
+
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les tableaux</title>
+    <!-- liaison fichier css -->
+    <link rel="stylesheet" href="css/style-tableau.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Liste Des Technologies Et Leurs Rôles</h1>
+        <!-- Debut section tableaux -->
+        <table>
+            <!-- Debut en tete du tableaux -->
+            <thead>
+                <tr>
+                    <th>Technologie</th>
+                    <th>Utilisation</th>
+                    <th>Rôle</th>
+                    <th>Importance</th>
+                </tr>
+            </thead>
+            <!-- Fin en tete du tableaux -->
+
+            <!-- Debut contenu du tableaux -->
+            <tbody>
+                <tr>
+                    <td>HTML</td>
+                    <td>Structure de base des pages web</td>
+                    <td>Definition du contenu</td>
+                    <td>Elevée</td>
+                </tr>
+
+                <tr>
+                    <td>CSS3</td>
+                    <td>Stylisation et mise en page des pages web</td>
+                    <td>Stylisation du contenu</td>
+                    <td>Elevée</td>
+                </tr>
+
+                <tr>
+                    <td>JAVASCRIPT</td>
+                    <td>Interactivité et fonctionnalités dynamiques</td>
+                    <td>Programmation coté client</td>
+                    <td>Elevée</td>
+                </tr>
+
+                <tr>
+                    <td>PYTHON</td>
+                    <td>Développement d'applications, scripts, IA, etc..</td>
+                    <td>Programmation polyvalente</td>
+                    <td>Elevée</td>
+                </tr>
+                
+                <tr>
+                    <td>PHP</td>
+                    <td>Développement de Sites et applications web</td>
+                    <td>Programmation Côté Serveur</td>
+                    <td>Elevée</td>
+                </tr>
+
+                <tr>
+                    <td>DJANGO</td>
+                    <td>Framework pour developpement de sites et app web</td>
+                    <td>Architecture de base MVC ou MVT</td>
+                    <td>Moyen</td>
+                </tr>
+            </tbody>
+            <!-- Fin contenu du tableaux -->
+        </table>
+        <!-- Fin section tableaux -->
+    </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
